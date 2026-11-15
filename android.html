@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小小屏幕补光灯隐私政策</title>
+<style>
+  body { margin:0 auto; padding:24px 18px 64px; max-width:640px;
+         font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;
+         color:#222; background:#fff; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .date { color:#888; font-size:13px; margin:0 0 28px; }
+  h2 { font-size:16px; margin:28px 0 8px; }
+  ul { padding-left:20px; } li { margin:4px 0; }
+  table { border-collapse:collapse; width:100%; font-size:14px; margin:10px 0; }
+  th, td { border:1px solid #e5e5e5; padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:#f5f7f5; }
+  code { background:#f1f1f1; padding:1px 4px; border-radius:4px; font-size:13px; word-break:break-all; }
+</style>
+</head>
+<body>
+
+<h1>小小屏幕补光灯隐私政策</h1>
+<p class="date">生效日期：2026 年 11 月 15 日 · 开发者：田杰（个人开发者）</p>
+
+<h2>一、这个应用是什么</h2>
+<p>小小屏幕补光灯把手机或平板的屏幕变成一盏可调色温的光：打开就是一片光，可以选暖、自然、冷白三档，也可以自己调色温、用彩色光、定时关灯，镜子模式下还能看到前置相机的实时预览并配合一圈环形光。它不需要注册，也不需要登录。</p>
+
+<h2>二、本机保存什么</h2>
+<p>小小屏幕补光灯不设账号，也不收集任何个人信息。你在应用里的设置只保存在这台设备上，不会上传到开发者或任何第三方服务器。全部内容都在本机的应用私有目录内，其他应用读不到：</p>
+<ul>
+<li><strong>你保存的预设</strong>：自己存下的灯色（名称与颜色，最多 6 条）。</li>
+<li><strong>完整版状态</strong>：是否已解锁完整版（用于判断功能入口是否可用）。</li>
+</ul>
+<p>就这两项。灯的颜色、定时关灯的设置只在应用运行时留在内存里，关掉应用即消失，不写入本机存储。这些内容都不含姓名、手机号、身份信息、位置或通讯录。卸载应用时，上面两项随之删除。</p>
+
+<h2>三、什么时候联网</h2>
+<p>本应用自身的代码不做任何网络请求。只有购买、恢复完整版时，由华为应用内支付组件联网完成，且在你同意本政策之后才会发生：</p>
+<ul>
+<li><strong>购买与恢复完整版</strong>：点击购买或恢复购买时，由华为应用内支付组件拉起华为收银台、查询这个华为账号的购买记录。付款过程由华为应用市场完成，本应用接触不到你的支付信息。</li>
+</ul>
+<p>除支付时由华为组件联网外，其余功能都在本机运行：灯的颜色、定时、预设都不经过网络，也不上传任何内容。</p>
+
+<h2>四、我们接入的第三方组件</h2>
+<table>
+<tr><th>组件与提供方</th><th>用途与触发时机</th><th>收集的信息</th><th>隐私声明</th></tr>
+<tr><td>华为应用内支付 SDK（<code>com.huawei.hms:iap</code>）<br>提供方：华为软件技术有限公司</td><td>拉起华为收银台完成购买、查询已购记录。你点击购买或恢复购买时触发</td><td>交易记录</td><td><code>https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/sdk-data-security-0000001050044906</code></td></tr>
+<tr><td>华为 HMS Core 基础组件（<code>com.huawei.hms:base</code>，随附 <code>availableupdate</code>、<code>stats</code>、<code>device</code>、<code>baselegacyapi</code> 模块）<br>提供方：华为软件技术有限公司</td><td>随应用内支付组件一并引入，本应用未主动调用</td><td>以华为 HMS Core SDK 隐私声明为准</td><td><code>https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/sdk-data-security-0000001050044906</code></td></tr>
+<tr><td>华为联运应用 SDK，含应用更新（<code>com.huawei.hms:appservice</code>）<br>提供方：华为软件技术有限公司</td><td>检查本应用有没有新版本；安装只在你在更新提示里选择更新后进行。每次启动时触发，且只在你同意本政策之后</td><td>应用基本信息、设备类型、产品品牌、操作系统</td><td><code>https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/appgallerykit-app-sdk-security-0000001714810945</code></td></tr>
+</table>
+<p>本应用自身不接入任何统计、广告或崩溃上报 SDK；华为组件自身的数据处理以其隐私声明为准。上表「收集的信息」摘自华为对应 SDK 的隐私声明，以华为发布的最新版本为准；隐私声明地址以文字列出，可复制到浏览器打开。</p>
+
+<h2>五、我们申请的权限</h2>
+<table>
+<tr><th>权限</th><th>用途</th><th>不给会怎样</th></tr>
+<tr><td><code>CAMERA</code>（相机）</td><td>只用于镜子模式下的前置相机实时预览。只有你进入镜子模式时才会申请</td><td>镜子模式只有环形光、没有画面；开灯、调色温、彩色光、定时、桌面卡片等照常可用</td></tr>
+<tr><td><code>REQUEST_INSTALL_PACKAGES</code>（安装应用）</td><td>由华为应用更新组件带入。只用于安装本应用的新版本（你在更新提示里选择更新后）；若手机缺少或需升级华为移动服务（HMS Core），华为组件可能提示你安装或升级</td><td>无法在应用内直接安装新版本，可到华为应用市场更新</td></tr>
+<tr><td><code>GET_COMMON_DATA</code>（与华为应用市场通信）</td><td>华为应用更新组件与华为应用市场之间传递更新信息（由该组件带入），不读取你在本应用里的任何内容</td><td>无法检查新版本，其他功能照常</td></tr>
+<tr><td><code>INTERNET</code>、<code>ACCESS_NETWORK_STATE</code>（网络）</td><td>仅用于第三条所说的购买与恢复完整版（由华为支付组件带入）。本应用自身的代码没有任何网络请求</td><td>无法购买或恢复完整版，其他功能全部照常</td></tr>
+</table>
+<p>本应用不读通讯录、不读日历、不定位、不用麦克风，也不申请存储权限：应用不保存照片、不录像，也不读取你的文件。</p>
+
+<h2>六、相机怎么用</h2>
+<p>相机只在镜子模式下使用，而且只在预览：</p>
+<ul>
+<li><strong>用时才申请</strong>：只有你进入镜子模式时才申请相机权限。</li>
+<li><strong>只预览，不留存</strong>：画面只显示在屏幕上，不录制、不保存、不上传，也不写入任何文件。</li>
+<li><strong>不授权也能用其他功能</strong>：不给相机权限时，镜子模式只剩环形光，其他功能照常使用；你也可以之后在系统设置里再给权限。</li>
+</ul>
+
+<h2>七、桌面卡片</h2>
+<p>你可以把「开灯」卡片放到桌面，点一下直接打开本应用。卡片只显示一个「开灯」按钮，不显示你的任何设置或内容，也不在后台收集数据。</p>
+
+<h2>八、我们不做什么</h2>
+<p>我们（开发者）不要求你提供姓名、手机号、身份信息。本应用<strong>自身的代码</strong>不获取位置和设备标识、不做统计或行为分析、不投放广告、不推送通知，也不读取剪贴板；华为组件自身的数据处理见第四节。</p>
+
+<h2>九、你的数据由你支配</h2>
+<p>应用内的设置都在本机。你想清空时，直接在系统设置里清除本应用的数据或卸载应用即可，全部设置会一并删除；本应用不保留任何副本。</p>
+
+<h2>十、人工智能</h2>
+<p>本应用不含人工智能功能，也不会把你的任何内容用于模型训练。</p>
+
+<h2>十一、未成年人</h2>
+<p>本应用不针对未满 14 周岁的未成年人提供服务。</p>
+
+<h2>十二、联系我们</h2>
+<p>有任何问题请联系：x2ai_tech@163.com</p>
+
+<h2>十三、政策更新</h2>
+<p>本政策如有更新，会随应用版本一并发布，并更新页首的生效日期。</p>
+
+<h2>十四、完整版与协议</h2>
+<p>完整版为一次性买断，不是订阅，不会自动续费。买断费用按应用市场当时标价收取，交易由华为应用市场完成。你依法享有的解除合同、退款等权利不因本条受影响；因本应用自身故障导致已购功能无法使用且合理期限内无法修复的，我们将协助你完成退款。</p>
+<p>我们不保证本应用永久在应用市场上架。若停止分发，已安装设备上的本应用及已购完整版可继续使用。</p>
+<p>本应用由田杰（个人开发者）开发运营，联系邮箱见本页「联系我们」。</p>
+
+</body>
+</html>
